@@ -5,9 +5,12 @@ const DashboardPage = async () => {
   const user = await currentUser();
 
   return (
-    <div>
+    <div className="flex flex-col">
       <p>Dashboard page here!</p>
-      <p>{JSON.stringify(user)}</p>
+      <p>Username: {user?.username}</p>
+      <p>Email: {user?.email}</p>
+      <p>UserId: {user?.id}</p>
+
       <GetLocation />
     </div>
   );
