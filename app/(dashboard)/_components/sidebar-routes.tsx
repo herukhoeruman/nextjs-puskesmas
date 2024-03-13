@@ -1,22 +1,9 @@
 "use client";
 
-import {
-  Layout,
-  Compass,
-  List,
-  BarChart,
-  Pencil,
-  Trash,
-  Inbox,
-  Send,
-  MailWarning,
-  MailCheck,
-  Archive,
-} from "lucide-react";
+import { Compass, List } from "lucide-react";
 
 import { SidebarItem } from "./sidebar-item";
 import { usePathname } from "next/navigation";
-import { ButtonCreate } from "./button-create";
 
 const routes = [
   {
