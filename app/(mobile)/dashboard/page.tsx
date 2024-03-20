@@ -1,18 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import { MobileHeader } from "../_components/mobile-header";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   return (
     <div>
       <MobileHeader />
-      <div className="my-6">
+      <div className="my-6 space-y-2">
         <p className="text-md font-medium">Menu</p>
         <div className="grid grid-cols-4 gap-4">
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
               <Image
                 src="/patient.png"
@@ -23,7 +19,7 @@ const Dashboard = () => {
             </div>
             <p className="text-xs text-gray-500">Cek Pasien</p>
           </div>
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
               <Image
                 src="/folder.png"
@@ -34,7 +30,7 @@ const Dashboard = () => {
             </div>
             <p className="text-xs text-gray-500">Histori Pasien</p>
           </div>
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
               <Image
                 src="/advice.png"
@@ -45,7 +41,7 @@ const Dashboard = () => {
             </div>
             <p className="text-xs text-gray-500">Sebaraan Hasil Cek</p>
           </div>
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
               <Image
                 src="/pie-chart.png"
@@ -56,7 +52,7 @@ const Dashboard = () => {
             </div>
             <p className="text-xs text-gray-500">Grafik Kunjungan</p>
           </div>
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
               <Image
                 src="/medical-team.png"

@@ -5,6 +5,7 @@ import { GetLocation } from "@/components/get-location";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { currentUser } from "@/lib/auth";
 import axios from "axios";
+import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -41,20 +42,25 @@ export const MobileHeader = () => {
       const response = await axios.get(
         `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
       );
-      setAddress(
-        `${response.data.address.road}, ${response.data.address.city}`
-      );
-      // setAddress(response.data.display_name);
+      // setAddress(
+      //   `${response.data.address.road}, ${response.data.address.city}`
+      // );
+      setAddress(response.data.display_name);
     } catch (error) {
       console.error("Error fetching address:", error);
       setAddress("Address not found");
     }
   };
+
   return (
     <div className="flex flex-col gap-6">
       <div>
         <p className="text-lg font-bold">Hi, {user?.name}!</p>
-        <p className="text-xs">{address}</p>
+        {!address ? (
+          <Loader2 className="w-4 h-4 text-blue-500 animate-spin" />
+        ) : (
+          <p className="text-xs">{address}</p>
+        )}
       </div>
       <div className="relative flex items-start justify-between bg-blue-500 w-full h-36 rounded-3xl p-4">
         <div>
