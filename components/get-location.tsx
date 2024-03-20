@@ -1,6 +1,5 @@
 "use client";
 import axios from "axios";
-import { MapPin } from "lucide-react";
 
 import { useEffect, useState } from "react";
 
@@ -34,10 +33,10 @@ export const GetLocation: React.FC = () => {
       const response = await axios.get(
         `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
       );
-      setAddress(
-        `${response.data.address.road}, ${response.data.address.city}`
-      );
-      // setAddress(response.data.display_name);
+      // setAddress(
+      //   `${response.data.address.road}, ${response.data.address.city}`
+      // );
+      setAddress(response.data.display_name);
     } catch (error) {
       console.error("Error fetching address:", error);
       setAddress("Address not found");
