@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { MobileHeader } from "../_components/mobile-header";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   return (
