@@ -31,7 +31,7 @@ export const ButtonSession = () => {
       <DropdownMenuTrigger asChild>
         <Avatar className="cursor-pointer">
           <AvatarImage src={user.image || ""} alt="@shadcn" />
-          <AvatarFallback className="bg-orange-600 text-white">
+          <AvatarFallback className="bg-gray-600 text-white">
             {getInitialsFromEmail(user.email!)}
           </AvatarFallback>
         </Avatar>
