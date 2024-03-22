@@ -61,19 +61,37 @@ const MapSebaranHasilCek = () => {
         position={[-6.897118126196414, 107.635322561413]}
         icon={markerIcon}
       >
-        <Popup>Jane</Popup>
+        <Popup>
+          Nama Pasien: Sutrinso <br />
+          Tinggal: {address} <br />
+          Tanggal Cek: 10 Maret 2024 <br />
+          Kondisi Terakhir: Sehat <br />
+          Edukasi: Video <br />
+        </Popup>
       </Marker>
       <Marker
         position={[-6.896342285256117, 107.63765829811456]}
         icon={markerIcon}
       >
-        <Popup>Josep</Popup>
+        <Popup>
+          Nama Pasien: Sutrinso <br />
+          Tinggal: {address} <br />
+          Tanggal Cek: 10 Maret 2024 <br />
+          Kondisi Terakhir: Sehat <br />
+          Edukasi: Video <br />
+        </Popup>
       </Marker>
       <Marker
         position={[-6.895385488564343, 107.63613003650603]}
         icon={markerIcon}
       >
-        <Popup>Jess</Popup>
+        <Popup>
+          Nama Pasien: Sutrinso <br />
+          Tinggal: {address} <br />
+          Tanggal Cek: 10 Maret 2024 <br />
+          Kondisi Terakhir: Sehat <br />
+          Edukasi: Video <br />
+        </Popup>
       </Marker>
     </MapContainer>
   );
