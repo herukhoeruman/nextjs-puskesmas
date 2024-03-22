@@ -3,7 +3,7 @@ import { MobileHeader } from "./_components/mobile-header";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="h-full p-4">
+    <main className="h-full">
       {children}
       <MobileFooter />
     </main>

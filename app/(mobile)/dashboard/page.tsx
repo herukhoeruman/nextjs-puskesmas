@@ -1,68 +1,57 @@
 import Image from "next/image";
 import { MobileHeader } from "../_components/mobile-header";
+import Link from "next/link";
+
+const menus = [
+  {
+    icon: "/patient.png",
+    title: "Cek Pasien",
+    href: "/cek-pasien",
+  },
+  {
+    icon: "/folder.png",
+    title: "Histori Pasien",
+    href: "/histori-pasien",
+  },
+  {
+    icon: "/advice.png",
+    title: "Sebaran Hasil Cek",
+    href: "/sebaran",
+  },
+  {
+    icon: "/pie-chart.png",
+    title: "Grafik Kunjungan",
+    href: "/grafik-kunjungan",
+  },
+  {
+    icon: "/medical-team.png",
+    title: "Layanan Edukasi",
+    href: "/layanan-edukasi",
+  },
+];
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="p-4">
       <MobileHeader />
       <div className="my-6 space-y-2">
         <p className="text-md font-medium">Menu</p>
         <div className="grid grid-cols-4 gap-4">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
-              <Image
-                src="/patient.png"
-                width={40}
-                height={40}
-                alt="cek-pasien"
-              />
-            </div>
-            <p className="text-xs text-gray-500">Cek Pasien</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
-              <Image
-                src="/folder.png"
-                width={40}
-                height={40}
-                alt="cek-pasien"
-              />
-            </div>
-            <p className="text-xs text-gray-500">Histori Pasien</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
-              <Image
-                src="/advice.png"
-                width={40}
-                height={40}
-                alt="cek-pasien"
-              />
-            </div>
-            <p className="text-xs text-gray-500">Sebaraan Hasil Cek</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
-              <Image
-                src="/pie-chart.png"
-                width={40}
-                height={40}
-                alt="cek-pasien"
-              />
-            </div>
-            <p className="text-xs text-gray-500">Grafik Kunjungan</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20">
-              <Image
-                src="/medical-team.png"
-                width={40}
-                height={40}
-                alt="cek-pasien"
-              />
-            </div>
-            <p className="text-xs text-gray-500">Layanan Edukasi</p>
-          </div>
+          {menus.map((menu, index) => (
+            <Link key={index} href={menu.href}>
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center justify-center text-center bg-sky-50 rounded-full w-20 h-20 transition duration-300 ease-in-out transform hover:bg-blue-200">
+                  <Image
+                    src={menu.icon}
+                    width={40}
+                    height={40}
+                    alt={menu.title}
+                  />
+                </div>
+                <p className="text-xs text-gray-500">{menu.title}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

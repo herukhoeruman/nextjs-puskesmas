@@ -1,9 +1,8 @@
 import {
   CircleUserRound,
-  FileClock,
   HomeIcon,
+  ListCollapse,
   MessageCircle,
-  MoreHorizontal,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ export const MobileFooter = () => {
           <MessageCircle className="w-6 h-6 text-slate-600" />
         </Link>
         <Link href="/dashboard">
-          <MoreHorizontal className="w-6 h-6 text-slate-600" />
+          <ListCollapse className="w-6 h-6 text-slate-600" />
         </Link>
         <Link href="/dashboard">
           <CircleUserRound className="w-6 h-6 text-slate-600" />

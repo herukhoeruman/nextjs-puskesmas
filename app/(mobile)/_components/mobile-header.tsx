@@ -42,9 +42,6 @@ export const MobileHeader = () => {
       const response = await axios.get(
         `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
       );
-      // setAddress(
-      //   `${response.data.address.road}, ${response.data.address.city}`
-      // );
       setAddress(response.data.display_name);
     } catch (error) {
       console.error("Error fetching address:", error);
@@ -52,6 +49,7 @@ export const MobileHeader = () => {
     }
   };
 
+  console.log(`${latitude}, ${longitude}`);
   return (
     <div className="flex flex-col gap-6">
       <div>
