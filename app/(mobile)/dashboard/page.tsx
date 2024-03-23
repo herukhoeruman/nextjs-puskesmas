@@ -21,7 +21,7 @@ const menus = [
   {
     icon: "/pie-chart.png",
     title: "Grafik Kunjungan",
-    href: "/grafik-kunjungan",
+    href: "/kunjungan",
   },
   {
     icon: "/medical-team.png",

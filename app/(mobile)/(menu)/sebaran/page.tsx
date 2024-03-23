@@ -13,7 +13,7 @@ const MapSebaranHasilCek = dynamic(
 const SebaranHasilPage = () => {
   return (
     <div className="py-16 h-full">
-      <AppBar />
+      <AppBar title="Sebaran Hasil Cek" />
       <MapSebaranHasilCek />
     </div>
   );
