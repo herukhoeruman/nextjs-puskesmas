@@ -6,12 +6,12 @@ const menus = [
   {
     icon: "/patient.png",
     title: "Cek Pasien",
-    href: "/cek-pasien",
+    href: "/cek",
   },
   {
     icon: "/folder.png",
     title: "Histori Pasien",
-    href: "/histori-pasien",
+    href: "/histori",
   },
   {
     icon: "/advice.png",
@@ -26,7 +26,7 @@ const menus = [
   {
     icon: "/medical-team.png",
     title: "Layanan Edukasi",
-    href: "/layanan-edukasi",
+    href: "/edukasi",
   },
 ];
 

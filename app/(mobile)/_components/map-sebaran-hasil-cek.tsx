@@ -38,6 +38,7 @@ const MapSebaranHasilCek = () => {
       zoom={16}
       scrollWheelZoom={false}
       style={{ height: "100%" }}
+      attributionControl={false}
     >
       <TileLayer
         attribution=""
